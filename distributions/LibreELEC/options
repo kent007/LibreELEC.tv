@@ -48,7 +48,8 @@
 # for a list of additional drivers see packages/linux-drivers
 # Space separated list is supported,
 # e.g. ADDITIONAL_DRIVERS="DRIVER1 DRIVER2"
-  ADDITIONAL_DRIVERS="RTL8192CU RTL8192DU RTL8192EU RTL8188EU RTL8812AU"
+#  ADDITIONAL_DRIVERS="RTL8192CU RTL8192DU RTL8192EU RTL8188EU RTL8812AU"
+ ADDITIONAL_DRIVERS=""
 
 # Default size of system partition, in MB, eg. 512
   SYSTEM_SIZE=512
@@ -216,8 +217,8 @@
 
 # Xorg Graphic drivers to use (all / i915,i965,r200,r300,r600,nvidia)
 # Space separated list is supported,
-# e.g. GRAPHIC_DRIVERS="i915 i965 r300 r600 radeonsi nvidia"
-  GRAPHIC_DRIVERS="r300 r600 radeonsi iris i915 i965 nvidia nvidia-legacy vmware virtio"
+# e.g. GRAPHIC_DRIVERS="i915 i965 r300 r600 radeonsi nvidia nvidia-legacy"
+  GRAPHIC_DRIVERS="r300 r600 radeonsi iris i915 i965 vmware virtio"
 
 # build and install remote support (yes / no)
   REMOTE_SUPPORT="yes"
