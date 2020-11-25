@@ -17,6 +17,6 @@ makeinstall_host() {
 }
 
 makeinstall_target() {
-  mkdir -p $INSTALL/usr/lib
-  cp -rP $PKG_BUILD/$PKG_NAME $INSTALL/usr/lib
+  mkdir -p $INSTALL/usr/lib/python3.8
+  cp -rP $PKG_BUILD/$PKG_NAME $INSTALL/usr/lib/python3.8
 }
