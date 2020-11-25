@@ -30,7 +30,7 @@ PKG_CONFIGURE_OPTS_HOST="ac_cv_prog_HAS_HG=/bin/false
                          --disable-bzip2
                          --enable-zlib
                          --enable-xz
-                         --disable-tk
+                         --enable-tkinter
                          --disable-curses
                          --disable-pydoc
                          --disable-test-modules
@@ -68,7 +68,9 @@ PKG_CONFIGURE_OPTS_TARGET="ac_cv_prog_HAS_HG=/bin/false
                            --enable-bzip2
                            --enable-zlib
                            --enable-xz
-                           --disable-tk
+                           --enable-tkinter
+			   --enable-string
+			   --enable-random
                            --enable-curses
                            --disable-pydoc
                            --disable-test-modules
