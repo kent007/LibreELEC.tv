@@ -8,10 +8,15 @@ PKG_ARCH="any"
 PKG_LICENSE="MIT"
 PKG_SITE="https://github.com/ramonhagenaars/jsons"
 PKG_URL="https://github.com/ramonhagenaars/jsons/archive/v1.3.0.tar.gz"
-PKG_DEPENDS_HOST="Python3:host typish:host"
+PKG_DEPENDS_HOST="Python3:host"
 PKG_LONGDESC="Its used by electionguard"
 PKG_TOOLCHAIN="manual"
 
 makeinstall_host() {
   exec_thread_safe python3 setup.py install --prefix=$TOOLCHAIN
+}
+
+makeinstall_target() {
+  mkdir -p $INSTALL/usr/lib
+  cp -rP $PKG_BUILD/$PKG_NAME $INSTALL/usr/lib
 }

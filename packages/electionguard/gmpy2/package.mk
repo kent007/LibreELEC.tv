@@ -13,5 +13,10 @@ PKG_LONGDESC="Its used by electionguard"
 PKG_TOOLCHAIN="manual"
 
 makeinstall_host() {
-  exec_thread_safe python3 setup.py install --prefix=$TOOLCHAIN
+  python3 setup.py install --prefix=$TOOLCHAIN
+}
+
+makeinstall_target() {
+  mkdir -p $INSTALL/usr/lib
+  cp -rP $PKG_BUILD $INSTALL/usr/lib
 }

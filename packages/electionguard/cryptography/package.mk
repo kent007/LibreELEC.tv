@@ -8,10 +8,15 @@ PKG_ARCH="any"
 PKG_LICENSE="BSD"
 PKG_SITE="https://pypi.org/project/cryptography"
 PKG_URL="https://files.pythonhosted.org/packages/94/5c/42de91c7fbdb817b2d9a4e64b067946eb38a4eb36c1a09c96c87a0f86a82/$PKG_NAME-$PKG_VERSION.tar.gz"
-PKG_DEPENDS_HOST="Python3:host cffi:host six:host"
+PKG_DEPENDS_HOST="Python3:host"
 PKG_LONGDESC="Its used by electionguard"
 PKG_TOOLCHAIN="manual"
 
 makeinstall_host() {
   exec_thread_safe python3 setup.py install --prefix=$TOOLCHAIN
+}
+
+makeinstall_target() {
+  mkdir -p $INSTALL/usr/lib
+  cp -rP $PKG_BUILD/src/$PKG_NAME $INSTALL/usr/lib
 }
