@@ -8,12 +8,12 @@ PKG_ARCH="any"
 PKG_LICENSE="BSD-3c"
 PKG_SITE="https://pypi.org/project/numpy"
 PKG_URL="https://files.pythonhosted.org/packages/c5/63/a48648ebc57711348420670bb074998f79828291f68aebfff1642be212ec/$PKG_NAME-$PKG_VERSION.zip"
-PKG_DEPENDS_HOST="Python3:host Cython:host"
+PKG_DEPENDS_HOST="toolchain gcc Python3:host Cython:host"
 PKG_LONGDESC="It's numpy and its used by electionguard"
 PKG_TOOLCHAIN="manual"
 
 makeinstall_host() {
-  exec_thread_safe python3 setup.py install --prefix=$TOOLCHAIN
+  python3 setup.py install --prefix=$TOOLCHAIN
 }
 
 makeinstall_target() {

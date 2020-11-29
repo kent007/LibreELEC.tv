@@ -8,7 +8,7 @@ PKG_ARCH="any"
 PKG_LICENSE="Apache"
 PKG_SITE="https://pypi.org/project/Cython"
 PKG_URL="https://files.pythonhosted.org/packages/6c/9f/f501ba9d178aeb1f5bf7da1ad5619b207c90ac235d9859961c11829d0160/$PKG_NAME-$PKG_VERSION.tar.gz"
-PKG_DEPENDS_HOST="Python3:host"
+PKG_DEPENDS_HOST="toolchain gcc Python3:host"
 PKG_LONGDESC="Its used by electionguard"
 PKG_TOOLCHAIN="manual"
 

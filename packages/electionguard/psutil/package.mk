@@ -8,7 +8,7 @@ PKG_ARCH="any"
 PKG_LICENSE="BSD"
 PKG_SITE="https://pypi.org/project/psutil"
 PKG_URL="https://files.pythonhosted.org/packages/33/e0/82d459af36bda999f82c7ea86c67610591cf5556168f48fd6509e5fa154d/$PKG_NAME-$PKG_VERSION.tar.gz"
-PKG_DEPENDS_HOST="Python3:host"
+PKG_DEPENDS_HOST="Python3:host setuptools:host"
 PKG_LONGDESC="Its used by electionguard"
 PKG_TOOLCHAIN="manual"
 
@@ -18,5 +18,6 @@ makeinstall_host() {
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/python3.8
-  cp -rP $PKG_BUILD/$PKG_NAME $INSTALL/usr/lib/python3.8
+  cp -rP $PKG_BUILD $INSTALL/usr/lib/python3.8
+  mv $INSTALL/usr/lib/python3.8/$PKG_NAME-$PKG_VERSION $INSTALL/usr/lib/python3.8/$PKG_NAME
 }
