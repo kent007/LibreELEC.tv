@@ -19,4 +19,5 @@ makeinstall_host() {
 makeinstall_target() {
   mkdir -p $INSTALL/usr/bin
   cp -rP $PKG_BUILD $INSTALL/usr/bin
+  mv $INSTALL/usr/bin/$PKG_NAME-$PKG_VERSION $INSTALL/usr/bin/$PKG_NAME
 }

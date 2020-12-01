@@ -12,12 +12,18 @@ PKG_DEPENDS_HOST="Python3:host gmp:host mpfr:host mpc:host"
 PKG_LONGDESC="Its used by electionguard"
 PKG_TOOLCHAIN="manual"
 
+#pre_makeinstall_host() {
+#  cp -rP $TOOLCHAIN/. $PKG_BUILD
+#  export LD_LIBRARY_PATH="$TOOLCHAIN/x86_64-libreelec-linux-gnu/sysroot:$LD_LIBRARY_PATH"
+#}
+
 makeinstall_host() {
-  python3 setup.py install --prefix=$TOOLCHAIN
+  python3 setup.py install --static=$TOOLCHAIN --prefix=$TOOLCHAIN
 }
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/python3.8
-  cp -rP $PKG_BUILD $INSTALL/usr/lib/python3.8
-  mv $INSTALL/usr/lib/python3.8/$PKG_NAME-$PKG_VERSION $INSTALL/usr/lib/python3.8/$PKG_NAME
+  #cp -rP $PKG_BUILD $INSTALL/usr/lib/python3.8
+  #mv $INSTALL/usr/lib/python3.8/$PKG_NAME-$PKG_VERSION $INSTALL/usr/lib/python3.8/$PKG_NAME
+  cp -rP $TOOLCHAIN/lib/python3.8/site-packages/gmpy2.cpython-38-x86_64-linux-gnu.so $INSTALL/usr/lib/python3.8
 }

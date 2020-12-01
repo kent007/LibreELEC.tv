@@ -13,7 +13,7 @@ PKG_LONGDESC="The Python Imaging Library adds image processing capabilities to y
 PKG_TOOLCHAIN="manual"
 
 makeinstall_host() {
-  python3 setup.py install --prefix=$TOOLCHAIN
+  exec_thread_safe python3 setup.py install
 }
 
 makeinstall_target() {
