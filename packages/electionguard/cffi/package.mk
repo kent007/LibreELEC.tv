@@ -9,6 +9,7 @@ PKG_LICENSE="BSD"
 PKG_SITE="https://pypi.org/project/cffi"
 PKG_URL="https://files.pythonhosted.org/packages/cb/ae/380e33d621ae301770358eb11a896a34c34f30db188847a561e8e39ee866/$PKG_NAME-$PKG_VERSION.tar.gz"
 PKG_DEPENDS_HOST="toolchain Python3:host"
+PKG_DEPENDS_TARGET="cffi:host"
 PKG_LONGDESC="Its used by electionguard"
 PKG_TOOLCHAIN="manual"
 
