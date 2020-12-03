@@ -2,8 +2,8 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="electionguard"
-PKG_VERSION="2.0.0"
-PKG_SHA256="ca755da180a5af0ceedb802fc023a07eb2dda08debf8ace507e9e383b549d288"
+PKG_VERSION="3.0.0"
+PKG_SHA256="e4b22f1e41f136319d4031b9d0b4d5a9dd7dd7ddf63292f88e3cc7e8ef4272c0"
 PKG_ARCH="any"
 PKG_LICENSE="MIT"
 PKG_SITE="https://github.com/tausiftt5238/cs5204_election_guard"
